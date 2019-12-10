@@ -40,23 +40,23 @@ public class CustomerControllerTest  extends AbstractTest{
 	   }
 	
 	
-	@Test
-	   public void getProductsList() throws Exception {
-	      String uri = "/getCustomers";
-	      
-	      int[] tabNumb = {102};
-	      String inputJsonTab = super.mapToJson(tabNumb);
-	      
-	      MvcResult mvcResult = mvc.perform(MockMvcRequestBuilders.post(uri)
-	 	         .contentType(MediaType.APPLICATION_JSON_VALUE)
-	 	         .content(inputJsonTab)).andReturn();
-	      
-	      int status = mvcResult.getResponse().getStatus();
-	      assertEquals(200, status);
-	      String content = mvcResult.getResponse().getContentAsString();
-	      Customer[] customer = super.mapFromJson(content, Customer[].class);
-	      assertTrue(customer.length > 0);
-	   }
+//	@Test
+//	   public void getProductsList() throws Exception {
+//	      String uri = "/getCustomers";
+//	      
+//	      int[] tabNumb = {102};
+//	      String inputJsonTab = super.mapToJson(tabNumb);
+//	      
+//	      MvcResult mvcResult = mvc.perform(MockMvcRequestBuilders.post(uri)
+//	 	         .contentType(MediaType.APPLICATION_JSON_VALUE)
+//	 	         .content(inputJsonTab)).andReturn();
+//	      
+//	      int status = mvcResult.getResponse().getStatus();
+//	      assertEquals(200, status);
+//	      String content = mvcResult.getResponse().getContentAsString();
+//	      Customer[] customer = super.mapFromJson(content, Customer[].class);
+//	      assertTrue(customer.length > 0);
+//	   }
 	
 	
 	
